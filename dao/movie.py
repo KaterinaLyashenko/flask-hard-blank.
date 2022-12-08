@@ -43,3 +43,6 @@ class MovieDAO:
         movie.rating = movie_d.get("rating")
         movie.genre_id = movie_d.get("genre_id")
         movie.director_id = movie_d.get("director_id")
+
+        self.session.add(movie)
+        self.session.commit()

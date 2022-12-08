@@ -7,7 +7,7 @@ from setup_db import db
 class Movie(db.Model):
     __tablename__ = 'movie'
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100))
+    title = db.Column(db.String(100))
     description = db.Column(db.String(300))
     trailer = db.Column(db.String(100))
     year = db.Column(db.Integer)
@@ -19,7 +19,7 @@ class Movie(db.Model):
 
 class MovieSchema(Schema):
     id = fields.Int()
-    name = fields.Str()
+    title = fields.Str()
     description = fields.Str()
     trailer = fields.Str()
     year = fields.Int()
